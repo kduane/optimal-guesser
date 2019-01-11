@@ -20,22 +20,20 @@ def guess_number(min, max)
   #######################
   # YOUR CODE GOES HERE #
   #######################
-  min = min
-  max = max
-  guess = (min + max) / 2
 
   while (min <= max)
-    guess = (min + ((max - min )/ 2))
-    # binding.pry
-    if check(guess) == 1
-      min = (guess + 1)
-    elsif check(guess) == -1
+    guess = (min + max) / 2
+    result = check(guess)
+    if result == 1
       max = (guess - 1)
+    elsif result == (-1)
+      # binding.pry
+      min = (guess + 1)
     else
       return guess
     end
 
   end
 
-  nil
+
 end
